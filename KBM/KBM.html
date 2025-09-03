@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keamo Babe Mentoring</title>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#0d6efd; /* bootstrap primary */
+      --accent:#facc15;  /* yellow accent */
+      --dark:#0b132b;
+    }
+    body{font-family: 'Poppins', sans-serif;}
+    /* Hero styling */
+    .hero{
+      background: radial-gradient(1200px 600px at 10% 20%, rgba(13,110,253,.25), transparent 60%),
+                  radial-gradient(1200px 600px at 90% 0%, rgba(250,204,21,.25), transparent 50%),
+                  linear-gradient(135deg, #0b132b 0%, #1e2a5e 100%);
+      color:#fff;
+      min-height: 85vh;
+      display:flex;align-items:center;
+    }
+    .typed-word{color:var(--accent);border-right:2px solid var(--accent);padding-right:2px}
+
+    /* Flip cards */
+    .flip-card{ perspective: 1000px; cursor: pointer; min-height: 250px;  }
+    .flip-card-inner{ position: relative; width:100%; height: 100%; transition: transform .7s; transform-style: preserve-3d; }
+    .flip-card.is-flipped .flip-card-inner{ transform: rotateY(180deg); }
+    .flip-card-face{ position:absolute; top:0; left:0; right:0; bottom:0; backface-visibility: hidden; border:1px solid rgba(0,0,0,.08); border-radius: .75rem; box-shadow: 0 10px 25px rgba(0,0,0,.08); padding:1.25rem; background:#ffffff; }
+    .flip-card-back{ transform: rotateY(180deg); background:#f8fafc; }
+    .flip-icon{ font-size: .9rem; opacity:.7 }
+
+    /* About image */
+    .about-img{ width: 100%; max-width: 520px; border-radius:1rem; box-shadow:0 10px 25px rgba(0,0,0,.15); }
+
+    /* Smooth scroll */
+    html{ scroll-behavior: smooth; }
+
+    /* Section spacing */
+    section{ padding-top: 4rem; padding-bottom: 4rem; }
+    @media (min-width: 992px){ section{ padding-top: 5rem; padding-bottom: 5rem; } }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">KB Mentoring</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#book">Book</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero pt-5">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold mb-3">Career Mentoring that moves you forward</h1>
+      <p class="lead mb-4">I help professionals with <span id="typed" class="typed-word"></span></p>
+      <a href="#book" class="btn btn-warning btn-lg fw-semibold">Book a Session</a>
+    </div>
+  </header>
+
+  <!-- SERVICES / FLIP CARDS -->
+  <section id="services">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Services</h2>
+        <p class="text-muted">Tap a card to flip and read details. (Stacks on small screens; 2 per row on larger)</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- 6 cards, 2 per row on md+ -->
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6">
+          <div class="flip-card h-100">
+            <div class="flip-card-inner h-100">
+              <div class="flip-card-face d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="fw-semibold" style="text-align: center; margin-top:20px;">Career Discovery</h5>
+                  <p class="text-muted mb-0" style="text-align: center; margin-top:20px;">Find work that fits your strengths & values.</p>
+                </div>
+                <span class="flip-icon text-end" style="text-align: center; margin-top:20px;">Click to flip ↻</span>
+              </div>
+              <div class="flip-card-face flip-card-back d-flex flex-column justify-content-between">
+                <div>
+                  <p style="text-align: center;  margin-top:20px;">Get clarity on pharmaceutical career paths and entry strategies. Perfect for science students and recent graduates exploring industry opportunities. Includes career assessment, industry overview, and personalized action plan.</p>
+                </div>
+                <span class="flip-icon text-end">Click to flip ↺</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6">
+          <div class="flip-card h-100">
+            <div class="flip-card-inner h-100">
+              <div class="flip-card-face d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="fw-semibold" style="text-align: center; margin-top:20px;">Resume & LinkedIn Optimization</h5>
+                  <p class="text-muted mb-0" style="text-align: center; margin-top:20px;">Find work that fits your strengths & values.</p>
+                </div>
+                <span class="flip-icon text-end">Click to flip ↻</span>
+              </div>
+              <div class="flip-card-face flip-card-back d-flex flex-column justify-content-between">
+                <div>
+                 <p style="text-align: center; margin-top:20px;">Transform your CV and LinkedIn profile to stand out to pharmaceutical recruiters. I'll help you highlight relevant skills and experiences that resonate with hiring managers in the industry.</p>
+                </div>
+                <span class="flip-icon text-end">Click to flip ↺</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6">
+          <div class="flip-card h-100">
+            <div class="flip-card-inner h-100">
+              <div class="flip-card-face d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="fw-semibold" style="text-align: center; margin-top:20px;">Interview Preparation</h5>
+                  <p class="text-muted mb-0" style="text-align: center; margin-top:20px;">Structure, stories, and confidence under pressure.</p>
+                </div>
+                <span class="flip-icon text-end">Click to flip ↻</span>
+              </div>
+              <div class="flip-card-face flip-card-back d-flex flex-column justify-content-between">
+                <div>
+                  <p style="text-align: center; margin-top:20px;"> Master pharmaceutical industry interviews with targeted coaching sessions. Practice common interview scenarios, learn how to present your background effectively, and build confidence for your job search.</p>
+                </div>
+                <span class="flip-icon text-end">Click to flip ↺</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-12 col-md-6">
+          <div class="flip-card h-100">
+            <div class="flip-card-inner h-100">
+              <div class="flip-card-face d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="fw-semibold" style="text-align: center; margin-top:20px;">Job Search Strategy</h5>
+                  <p class="text-muted mb-0" style="text-align: center; margin-top:20px;">Get found by recruiters and hiring managers.</p>
+                </div>
+                <span class="flip-icon text-end">Click to flip ↻</span>
+              </div>
+              <div class="flip-card-face flip-card-back d-flex flex-column justify-content-between">
+                <div>
+                  <p style="text-align: center; margin-top:20px;">Navigate the pharmaceutical job market with insider knowledge. Learn where to find opportunities, how to network effectively, and which companies align with your career goals and values.</p>
+                </div>
+                <span class="flip-icon text-end">Click to flip ↺</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-12 col-md-6">
+          <div class="flip-card h-100">
+            <div class="flip-card-inner h-100">
+              <div class="flip-card-face d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="fw-semibold" style="text-align: center; margin-top:20px;">Ongoing Mentorship Programs</h5>
+                  <p class="text-muted mb-0" style="text-align: center; margin-top:20px;">Stand out with a clear narrative and proof.</p>
+                </div>
+                <span class="flip-icon text-end">Click to flip ↻</span>
+              </div>
+              <div class="flip-card-face flip-card-back d-flex flex-column justify-content-between">
+                <p style="text-align: center; margin-top:20px;">Receive continuous support as you build your pharmaceutical career. Regular check-ins help you stay on track, overcome challenges, and make strategic decisions about your professional development.</p>
+                <span class="flip-icon text-end">Click to flip ↺</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-12 col-md-6">
+          <div class="flip-card h-100">
+            <div class="flip-card-inner h-100">
+              <div class="flip-card-face d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="fw-semibold" style="text-align: center; margin-top:20px;">Group Workshops</h5>
+                  <p class="text-muted mb-0" style="text-align: center; margin-top:20px;">A system to generate interviews consistently.</p>
+                </div>
+                <span class="flip-icon text-end">Click to flip ↻</span>
+              </div>
+              <div class="flip-card-face flip-card-back d-flex flex-column justify-content-between">
+                <p style="text-align: center; margin-top:20px;">Join small group sessions with other aspiring pharmaceutical professionals. Topics include "Breaking into Pharma" and "Building Your Professional Network" - combining learning with peer connections.</p>
+                <span class="flip-icon text-end">Click to flip ↺</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="bg-light">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">About Us</h2>
+        
+      </div>
+
+      <div class="d-flex flex-column align-items-center">
+        <img class="about-img mb-4" src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Mentor portrait">
+        <div class="col-12 col-lg-12">
+          <p class="lead" style="text-align: center;">As a dedicated mentor, I am passionate about supporting the next generation of professionals in pharmaceutical and clinical research.<br><br>
+
+Through my involvement with the Black Pharma mentoring program and as a member of Black Women in Clinical Research, I bring both industry expertise and a deep understanding of  the unique challenges faced by underrepresented groups in our field. <br><br>
+
+I have had the privilege of guiding numerous science students as they navigate their transition into the pharmaceutical industry, helping them understand career pathways, develop essential skills, and build the confidence needed to succeed. <br><br>
+
+My mentoring approach combines practical industry insights with personalized guidance, drawing from my own professional journey to help mentees overcome obstacles and identify opportunities that align with their goals and aspirations.
+</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section id="book">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Book a Session</h2>
+        <p class="text-muted">Fill in the form and it will open your email to send the request.</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <form action="mailto:youremail@example.com" method="POST" enctype="text/plain" class="card shadow border-0 p-4">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Full Name</label>
+                <input type="text" name="Name" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" name="Email" class="form-control" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone</label>
+                <input type="tel" name="Phone" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Service</label>
+                <select name="Service" class="form-select" required>
+                  <option value="">Choose...</option>
+                  <option>Career Discovery</option>
+                  <option>CV Optimization</option>
+                  <option>Interview Coaching</option>
+                  <option>LinkedIn Revamp</option>
+                  <option>Personal Branding</option>
+                  <option>Job Search Strategy</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Preferred Date</label>
+                <input type="date" name="Preferred Date" class="form-control">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea name="Message" rows="4" class="form-control" placeholder="Tell me about your goals..." required></textarea>
+              </div>
+              <div class="col-12 d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">Submit Booking Request</button>
+              </div>
+            </div>
+          </form>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 border-top">
+    <div class="container text-center">
+      <small class="text-muted">© <span id="year"></span> Keamo Babe Mentoring. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Typing effect
+    const words = [
+      'Career Discovery',
+      'Resume Optimization',
+      'Interview Coaching',
+      'Mentorship Programs',
+      'Group Workshops',
+      'Job Search Strategy'
+    ];
+    const typedEl = document.getElementById('typed');
+    let wi = 0, li = 0, deleting = false;
+
+    function typeLoop(){
+      const word = words[wi];
+      if(!deleting){
+        typedEl.textContent = word.slice(0, ++li);
+        if(li === word.length){
+          deleting = true;
+          setTimeout(typeLoop, 1100); // pause at end
+          return;
+        }
+      } else {
+        typedEl.textContent = word.slice(0, --li);
+        if(li === 0){
+          deleting = false;
+          wi = (wi + 1) % words.length;
+        }
+      }
+      setTimeout(typeLoop, deleting ? 60 : 110);
+    }
+    window.addEventListener('DOMContentLoaded', typeLoop);
+
+    // Flip card toggles
+    document.querySelectorAll('.flip-card').forEach(card => {
+      card.addEventListener('click', () => card.classList.toggle('is-flipped'));
+      card.setAttribute('role','button');
+      card.setAttribute('tabindex','0');
+      card.addEventListener('keypress', (e)=>{ if(e.key==='Enter' || e.key===' '){ card.classList.toggle('is-flipped'); }});
+    });
+  </script>
+</body>
+</html>
